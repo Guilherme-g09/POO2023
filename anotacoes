@@ -3,3 +3,25 @@
 3 - Referências para a mesma instancia alteram as mesmas referências em caso de alteração;
 
 Abstração: Características de tal coisa
+
+UML
+________________
+|     nome     |
+|______________|
+| - atributos  |
+| - private    |
+| + public     |
+|______________|
+| + métodos    |
+|______________|
+
+4 - Associação
+    - Classe utiliza a carta
+
+5 - Métodos e atributos de instância
+    - Cada instancia tem os seus
+
+6 - Métodos de classe
+    - Método static, vai existir na classe mas não utiliza atributos/métodos de instância
+    - Não é replicado nas instancias
+    - Só podem acessar atributos de classe
