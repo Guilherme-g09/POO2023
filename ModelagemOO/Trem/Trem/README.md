@@ -1,5 +1,8 @@
 ## Getting Started
 
+IMPORTANTE: Para rodar corretamente o sistema, pode ser necessário a alteração do path na classe biblioteca.
+IMPORTANTE: Devido aos caracters utilizados para "desenhar" os vagões e locomotivas, talvez os caracteres fiquem estranhos.
+
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
 ## Folder Structure
