@@ -25,3 +25,16 @@ ________________
     - Método static, vai existir na classe mas não utiliza atributos/métodos de instância
     - Não é replicado nas instancias
     - Só podem acessar atributos de classe
+
+7 - NUNCA USAR PROTECTED
+    - Quebra hierarquia
+
+8 - Extends
+    - Super se refere a classe pai
+
+9 - CLONE
+    - copia rasa: cria outro exatamente igual, apenas do objeto e não de um atributo com referência para outro objeto
+    - copia profunda: cria outro exatamente igual, e também cria outros para atributos com referência
+
+10 - Abstract não pode ser instanciada, apenas refereciada.
+    - Eu crio uma classe abstrata para ser derivada, explorando polimorfismo

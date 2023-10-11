@@ -1,0 +1,53 @@
+4.
+
+- Exceções verificadas são aquelas que podemos prever com antecedência, por exemplo, o usuário digitar um número inválido em uma operação.
+Nesse tipo de exceção temos que fazer o tratamento adequado.
+São derivados da classe Exception
+
+- Exceções não verificadas são as que não conseguimos prever com antecedência, por exemplo, falta de memória.
+Nesse tipo de exceção não conseguimos fazer um tratamento adequado.
+São derivados da classe Error
+
+- NullPointerException é uma exceção não verificada pois o compilador não exige que seja feito um tratamento para ela, nem que utilize o comando "throw".
+
+- A palavra reservada "throws" deve ser utilizada para declarar exceções verificadas que um método pode lançar. 
+É diferente da palabra reservada "throw" que serve para lançar uma exceção verificada.
+
+5.
+
+- Não é necessário declarar que um método pode lançar uma NullPointerException pois essa exceção é do tipo não verificada, portanto o compilador não exige que seja especificado no método.
+
+6.
+
+- A exceção vai se espalhando pelas chamadas em busca de um tratamento até atingir o "Main". Caso não encontre um tratamento o programa é encerrado e é retornada uma mensagem de erro.
+
+7.
+
+- Pode realizar o tratamento adequado da exceção, como exibir uma mensagem de erro apropriada ou uma resolução para a exceção.
+
+8.
+
+- Sim, o tipo pode ser diferente se houver uma relação de herança entre as exceptions.
+
+Ex:
+public class SaldoInvalidoException extends Exception {
+    public SaldoInicialInvalidoException(String mensagem) {
+        super(mensagem);
+    }
+}
+
+public class App {
+    public static void main(String[] args) {
+        try {
+            throw new SaldoInvalidoException("Erro");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+No exemplo acima, o catch vai capturar a SaldoInvalidoException pois a mesma extends Exception, portanto existe uma relação de hierarquia.
+
+9.
+
+- Sim, existe, o uso de exceptions em métodos construtores ajuda a comunicar erros e dados inconsistentes. Possui a mesma função que as exceptions em métodos não construtores. 
