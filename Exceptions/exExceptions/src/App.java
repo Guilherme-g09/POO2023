@@ -54,7 +54,7 @@ public class App {
 
         // Exercício 10
         try {
-            String endereco = "http://java.sun.com//index.html";
+            String endereco = "https://github.com/";
             WebPageReader reader = new WebPageReader(endereco);
 
             boolean done = false;
