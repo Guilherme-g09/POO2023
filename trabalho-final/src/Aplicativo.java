@@ -1,40 +1,36 @@
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.stream.Stream;
+import enumerators.SO;
 
 public class Aplicativo {
-    public enum SO { Android, IOS }; 
     private int codigo;
     private String nome;
-    private double preco;
+    private double valorLicenca;
     private SO so;
     
-    public Aplicativo(int codigo, String nome, double preco, Aplicativo.SO so) {
+    public Aplicativo(int codigo, String nome, double valorLicenca, SO so) {
         this.codigo = codigo;
         this.nome = nome;
-        this.preco = preco;
+        this.valorLicenca = valorLicenca;
         this.so = so;
     }
 
     public int getCodigo() {
-        return codigo;
+        return this.codigo;
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
-    public double getPreco() {
-        return preco;
+    public double getValorLicenca() {
+        return this.valorLicenca;
     }
 
     public SO getSo() {
-        return so;
+        return this.so;
     }
 
     public String toLineFile(){
-        return codigo+","+nome+","+preco+","+so;
+        return this.codigo + "," + this.nome + "," + this.valorLicenca + "," + this.so;
     }
 
     public static Aplicativo fromLineFile(String line){
@@ -42,7 +38,7 @@ public class Aplicativo {
         int codigo = Integer.parseInt(tokens[0]);
         String nome = tokens[1];
         double preco = Double.parseDouble(tokens[2]);
-        Aplicativo.SO so = Aplicativo.SO.valueOf(Aplicativo.SO.class, tokens[3]);
-        return new Aplicativo(codigo,nome,preco,so);
+        SO so = SO.valueOf(SO.class, tokens[3]);
+        return new Aplicativo(codigo, nome, preco, so);
     }
 }

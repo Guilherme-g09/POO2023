@@ -10,6 +10,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
+import enumerators.SO;
 
 // Mais informações em: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html#data
 
@@ -19,7 +20,7 @@ public class App {
     private JTextField tfCodigo;
     private JTextField tfNome;
     private JTextField tfPreco;
-    private JComboBox<Aplicativo.SO> cbSo;
+    private JComboBox<SO> cbSo;
     private JButton btAdd;
 
     public App(){
@@ -74,7 +75,7 @@ public class App {
         tfPreco = new JTextField(10);
         linha2.add(tfPreco);
         linha2.add(new JLabel("Sist. Oper."));
-        cbSo = new JComboBox<>(Aplicativo.SO.values());
+        cbSo = new JComboBox<>(SO.values());
         linha2.add(cbSo);
         btAdd = new JButton("Novo App");
         btAdd.addActionListener(e->adicionaApp());
@@ -89,7 +90,7 @@ public class App {
         int codigo = Integer.parseInt(tfCodigo.getText());
         String nome = tfNome.getText();
         double preco = Double.parseDouble(tfPreco.getText());
-        Aplicativo.SO so = (Aplicativo.SO)cbSo.getSelectedItem();
+        SO so = (SO)cbSo.getSelectedItem();
         Aplicativo novo = new Aplicativo(codigo, nome, preco, so);
         catApps.cadastra(novo);
         catAppsVM.fireTableDataChanged();

@@ -29,7 +29,7 @@ public class CatalogoAplicativosViewModel extends AbstractTableModel {
         switch (col) {
             case 0 : return (Object)(app.getCodigo());
             case 1 : return (Object)(app.getNome());
-            case 2 : return (Object)(app.getPreco());
+            case 2 : return (Object)(app.getValorLicenca());
             case 3 : return (Object)(app.getSo());        
             default: return (Object)"none";
         }
